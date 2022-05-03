@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http; // permite que fazemos as requisições
 import 'dart:async'; // permite que fazemos as requisições mas não fiquemos as esperamos
@@ -9,15 +11,26 @@ const request =
 void main() async {
   print(await getData()); // pega os dados da função getData
 
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false, // tira o debug no canto da tela
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false, // tira o debug no canto da tela
 
-    home: Home(),
-     theme: ThemeData(
-      hintColor: Colors.amber,
-      primaryColor: Colors.white
-    )
-  ));
+      home: Home(),
+      theme: ThemeData(
+        hintColor: Colors.amber,
+        primaryColor: Colors.white,
+        inputDecorationTheme: InputDecorationTheme(
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.white),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.amber),
+          ),
+          hintStyle: TextStyle(color: Colors.amber),
+        ),
+      ),
+    ),
+  );
 }
 
 Future<Map> getData() async {
@@ -81,7 +94,6 @@ class HomeState extends State<Home> {
                       snapshot.data!["results"]["currencies"]["EUR"]["buy"];
                   //tela que rola
                   return SingleChildScrollView(
-                    
                     child: Padding(
                       padding: const EdgeInsets.all(15),
                       //
@@ -106,60 +118,52 @@ class HomeState extends State<Home> {
                             TextField(
                               keyboardType: TextInputType.number,
                               decoration: InputDecoration(
-                                border: OutlineInputBorder(),
-                                labelText: 'Reais',
-                                labelStyle: TextStyle(
-                                  color: Colors.amber,
-                                  fontSize: 25,
-                                ),
-                                prefixText: "R\$"
-                              ),
+                                  labelText: 'Reais',
+                                  labelStyle: TextStyle(
+                                    color: Colors.amber,
+                                    fontSize: 25,
+                                  ),
+                                  prefixText: "R\$"),
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontSize: 20,
                                 color: Colors.amber,
                               ),
                             ),
-                            SizedBox(
-                              height: 10,
-                            ),
+                            Divider(),
                             //
                             //
                             // TEXTFORMFIELD USD
                             TextField(
                               keyboardType: TextInputType.number,
                               decoration: InputDecoration(
-                                border: OutlineInputBorder(),
-                                labelText: 'Dólares',
-                                labelStyle: TextStyle(
-                                  color: Colors.amber,
-                                  fontSize: 25,
-                                ),
-                                prefixText: "\$"
-                              ),
+                                  border: OutlineInputBorder(),
+                                  labelText: 'Dólares',
+                                  labelStyle: TextStyle(
+                                    color: Colors.amber,
+                                    fontSize: 25,
+                                  ),
+                                  prefixText: "\$"),
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontSize: 20,
                                 color: Colors.amber,
                               ),
                             ),
-                            SizedBox(
-                              height: 10,
-                            ),
+                            Divider(),
                             //
                             //
                             // TEXTFORMFIELD EUR
                             TextField(
                               keyboardType: TextInputType.number,
                               decoration: InputDecoration(
-                                border: OutlineInputBorder(),
-                                labelText: 'Euro',
-                                labelStyle: TextStyle(
-                                  color: Colors.amber,
-                                  fontSize: 25,
-                                ),
-                                prefixText: "€"
-                              ),
+                                  border: OutlineInputBorder(),
+                                  labelText: 'Euro',
+                                  labelStyle: TextStyle(
+                                    color: Colors.amber,
+                                    fontSize: 25,
+                                  ),
+                                  prefixText: "€"),
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontSize: 20,
