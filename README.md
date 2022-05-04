@@ -1,40 +1,32 @@
-# <div align="center">💰💵 CONVERSOR DE MOEDAS 💵💰</div>
+# <div align="center"><h1>💰💵 CONVERSOR DE MOEDAS EM TEMPO REAL 💵💰</h1></div>
  
-### <div align="center">:green_circle: Projeto Proposto no Programa ONE - Oracle & Alura! :green_circle:</div>
+### <div align="center">:green_circle: Projeto Proposto no curso de dart/flutter :green_circle:</div>
 
 
 
-[ <div align="center" height="200"> ![flutter-plain](https://user-images.githubusercontent.com/102839085/166620212-0161ea66-5f7a-479a-9bb0-69e035238fff.svg) </div>
 
-[<div align="center">![Olá Mundo](https://shields.io/badge/Olá-Mundo-blue)](https://github.com/YuriSampaio10/Decodificador#readme)
-[![Status](https://shields.io/badge/STATUS-V%200.2%20Em%20Andamento-green)](https://github.com/YuriSampaio10/Decodificador#readme)  
-[![View Deployment](https://shields.io/badge/View-Deployment-yellow.svg)](https://yurisampaio10.github.io/Decodificador) </div>
+<div align="center"><img align="center" alt="Yuri-Flutter" height="80" width="400" src="https://user-images.githubusercontent.com/102839085/166620530-3a9dab72-8b29-474e-83c2-c5dc740f1c10.svg"></div>
+
+[<div align="center">![Olá Mundo](https://shields.io/badge/Olá-Mundo-blue)](https://github.com/YuriSampaio10/conversor-de-moedas#readme)
+[![Status](https://shields.io/badge/STATUS-V%200.2%20Em%20Andamento-green)](https://github.com/YuriSampaio10/conversor-de-moedas#readme)  
+
 ___
 ### :black_nib: Descrição:
 
-Este é um sistema de codificação de palavras que transforma as vogais em palavras:
+<h2>Este é um sistema de conversão das moedas Real, Dólar e Euro em tempo real através de uma API utilizando os dados da https://hgbrasil.com/status/finance</h2>
 
-### 🔽: Exemplo de como as trocas são feitas:
 
-- `Vogal a: `Transforma em : ai
-- `Vogal e: `Transforma em : enter
-- `Vogal i: `Transforma em : imes
-- `Vogal o: `Transforma em : ober
-- `Vogal u: `Transforma em : ufat
 ___
 ###  <div align="center">:computer: A seguir apresento a prévia do projeto.:computer:</div>
 
-[![Prévia do Projeto](img/telaPC.png)](https://github.com/YuriSampaio10/Decodificador#readme)
+ 
+[![Prévia do Projeto](https://user-images.githubusercontent.com/102839085/166622772-b9a829b0-e786-4cf1-9ea2-97a4c985eaa8.png)](https://github.com/YuriSampaio10/Decodificador#readme)
 ___
-###  <div align="center">:iphone: Uma Prévia em dispositivos menores.:iphone:</div>
+###  <div align="center">:iphone::on: Uma prévia do sistema em funcionamento.:on::iphone:</div>
 
-<div align="center"><a href="https://github.com/YuriSampaio10/Decodificador#readme"><img src="https://j.gifs.com/GRxYk5.gif" width="380" alt="Prévia Do Sistema Funcionando"></a></div>
+<div align="center"><a href="https://github.com/YuriSampaio10/Decodificador#readme"><img src="https://j.gifs.com/gpKQG3.gif" width="380" alt="Prévia Do Sistema Funcionando"></a></div>
 
 
-___ 
-###  <div align="center">:on: Uma prévia do sistema em funcionamento.:on:</div>
-
-[![Prévia do Projeto](https://j.gifs.com/NOjEg2.gif)](https://github.com/YuriSampaio10/Decodificador#readme)
 ___
 ### <div align="center">:heavy_check_mark: Links Uteis</div>
 
