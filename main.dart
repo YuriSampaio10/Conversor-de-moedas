@@ -42,13 +42,36 @@ Future<Map> getData() async {
 }
 
 class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+
+
 
   @override
   State<Home> createState() => HomeState();
 }
 
 class HomeState extends State<Home> {
+  
+//
+//controladores que irão obter os textos e descobrir quando eles são alterados 
+  final realController = TextEditingController();
+  final dolarController = TextEditingController();
+  final euroController = TextEditingController();
+
+  //
+  // funções que ão chamadas quando o valor dos campos são alterados
+  void _realChanged(String text){
+    print(text);
+  }
+
+  void _dolarChanged(String text){
+    print(text);
+  }
+
+  void _euroChanged(String text){
+    print(text);
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -114,15 +137,15 @@ class HomeState extends State<Home> {
                             ),
                             //
                             // TEXTFORMFIELD R$
-                            textField("Reais", "R\$"),
+                            textField("Reais", "R\$", realController, _realChanged),
                             Divider(),
                             //
                             // TEXTFORMFIELD USD
-                            textField("Dólares", "\$"),
+                            textField("Dólares", "\$", dolarController, _dolarChanged),
                             Divider(),
                             //
                             // TEXTFORMFIELD EUR
-                            textField("Euros", "€"),
+                            textField("Euros", "€", euroController, _euroChanged),
                           ],
                         ),
                       ),
@@ -136,8 +159,9 @@ class HomeState extends State<Home> {
 }
 //
 // Funnção que retorna a textField
-Widget textField(String label, String prefix) {
+Widget textField(String label, String prefix, TextEditingController c, Function changed) {
   return TextField(
+    controller: c,
     keyboardType: TextInputType.number,
     decoration: InputDecoration(
         border: OutlineInputBorder(),
@@ -152,5 +176,8 @@ Widget textField(String label, String prefix) {
       fontSize: 20,
       color: Colors.amber,
     ),
+    onChanged: (texto){
+      changed(texto);
+    },
   );
 }
