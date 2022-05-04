@@ -20,7 +20,7 @@ ___
 
 
 ___
-###  <div align="center">:computer: A seguir apresento a prévia do projeto.:computer:</div>
+###  <div align="center">:iphone: A seguir apresento a prévia do projeto.:iphone:</div>
 
  
 [![Prévia do Projeto](https://user-images.githubusercontent.com/102839085/166622772-b9a829b0-e786-4cf1-9ea2-97a4c985eaa8.png)](https://github.com/YuriSampaio10/Decodificador#readme)
@@ -42,8 +42,9 @@ ___
 
 ### <div align="center">:star::star::star:</div> 
 
-### <div align="center">[![Estrelas](https://shields.io/badge/Estrelas-Veja%20quem%20já%20%20deu%20estrelas%20%20E%20Deixe%20a%20sua%20Também-red)](https://github.com/YuriSampaio10/Decodificador/stargazers)</div>
+### <div align="center">[![Estrelas](https://shields.io/badge/Estrelas-Veja%20quem%20já%20%20deu%20estrelas%20%20E%20Deixe%20a%20sua%20Também-red)](https://github.com/YuriSampaio10/Conversor-de-moedas/stargazers)</div>
  
+ ___
  Desenvolvedores/Contribuintes :octocat:
 
 | [<img src="https://avatars.githubusercontent.com/u/102839085?s=400&u=ca12d62cdc893b83486100dc979f339f05ac5865&v=4" width=115><br><sub>Yuri Nogueira Sampaio</sub>](https://github.com/YuriSampaio10)
