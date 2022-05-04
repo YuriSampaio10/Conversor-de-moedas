@@ -113,63 +113,16 @@ class HomeState extends State<Home> {
                               height: 10,
                             ),
                             //
-                            //
                             // TEXTFORMFIELD R$
-                            TextField(
-                              keyboardType: TextInputType.number,
-                              decoration: InputDecoration(
-                                  labelText: 'Reais',
-                                  labelStyle: TextStyle(
-                                    color: Colors.amber,
-                                    fontSize: 25,
-                                  ),
-                                  prefixText: "R\$"),
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: 20,
-                                color: Colors.amber,
-                              ),
-                            ),
+                            textField("Reais", "R\$"),
                             Divider(),
-                            //
                             //
                             // TEXTFORMFIELD USD
-                            TextField(
-                              keyboardType: TextInputType.number,
-                              decoration: InputDecoration(
-                                  border: OutlineInputBorder(),
-                                  labelText: 'Dólares',
-                                  labelStyle: TextStyle(
-                                    color: Colors.amber,
-                                    fontSize: 25,
-                                  ),
-                                  prefixText: "\$"),
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: 20,
-                                color: Colors.amber,
-                              ),
-                            ),
+                            textField("Dólares", "\$"),
                             Divider(),
                             //
-                            //
                             // TEXTFORMFIELD EUR
-                            TextField(
-                              keyboardType: TextInputType.number,
-                              decoration: InputDecoration(
-                                  border: OutlineInputBorder(),
-                                  labelText: 'Euro',
-                                  labelStyle: TextStyle(
-                                    color: Colors.amber,
-                                    fontSize: 25,
-                                  ),
-                                  prefixText: "€"),
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: 20,
-                                color: Colors.amber,
-                              ),
-                            ),
+                            textField("Euros", "€"),
                           ],
                         ),
                       ),
@@ -180,4 +133,24 @@ class HomeState extends State<Home> {
           }),
     );
   }
+}
+//
+// Funnção que retorna a textField
+Widget textField(String label, String prefix) {
+  return TextField(
+    keyboardType: TextInputType.number,
+    decoration: InputDecoration(
+        border: OutlineInputBorder(),
+        labelText: label,
+        labelStyle: TextStyle(
+          color: Colors.amber,
+          fontSize: 25,
+        ),
+        prefixText: prefix),
+    textAlign: TextAlign.center,
+    style: TextStyle(
+      fontSize: 20,
+      color: Colors.amber,
+    ),
+  );
 }
