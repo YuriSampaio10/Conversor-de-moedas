@@ -55,25 +55,53 @@ class HomeState extends State<Home> {
   final dolarController = TextEditingController();
   final euroController = TextEditingController();
 
+//
+// armazenaremos os valores do dolar e euro
    late double dolar;
    late double euro;
+
+   //
+   // 
+   void clearAll(){
+     realController.text = "";
+     dolarController.text = "";
+     euroController.text = "";
+   }
    
 
   //
   // funções que ão chamadas quando o valor dos campos são alterados
   void _realChanged(String text){
+    //verifica se é vazio e limpa
+    if(text.isEmpty) {
+      clearAll();
+      return;
+    }
+
     double real = double.parse(text);
     dolarController.text = (real/dolar).toStringAsFixed(2);
     euroController.text = (real/euro).toStringAsFixed(2);
   }
 
   void _dolarChanged(String text){
+    //verifica se é vazio e limpa
+    if(text.isEmpty) {
+      clearAll();
+      return;
+    }
+
     double dolar = double.parse(text);
     realController.text = (dolar*this.dolar).toStringAsFixed(2);
     euroController.text = (dolar*this.dolar/euro).toStringAsFixed(2);
   }
 
   void _euroChanged(String text){
+    //verifica se é vazio e limpa
+    if(text.isEmpty) {
+      clearAll();
+      return;
+    }
+
     double euro = double.parse(text);
      realController.text = (euro*this.euro).toStringAsFixed(2);
      dolarController.text = (euro*this.euro/dolar).toStringAsFixed(2);
@@ -154,6 +182,7 @@ class HomeState extends State<Home> {
                             //
                             // TEXTFORMFIELD EUR
                             textField("Euros", "€", euroController, _euroChanged),
+                            Divider(),
                           ],
                         ),
                       ),
@@ -179,7 +208,6 @@ Widget textField(String label, String prefix, TextEditingController c, Function 
           fontSize: 25,
         ),
         prefixText: prefix),
-    textAlign: TextAlign.center,
     style: TextStyle(
       fontSize: 20,
       color: Colors.amber,
