@@ -9,8 +9,6 @@ import 'dart:convert'; // library para transformar os dados em json
 const request =
     "https://api.hgbrasil.com/finance?format=json&key=7daf723a "; //API
 void main() async {
-  print(await getData()); // pega os dados da função getData
-
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false, // tira o debug no canto da tela
@@ -57,18 +55,28 @@ class HomeState extends State<Home> {
   final dolarController = TextEditingController();
   final euroController = TextEditingController();
 
+   late double dolar;
+   late double euro;
+   
+
   //
   // funções que ão chamadas quando o valor dos campos são alterados
   void _realChanged(String text){
-    print(text);
+    double real = double.parse(text);
+    dolarController.text = (real/dolar).toStringAsFixed(2);
+    euroController.text = (real/euro).toStringAsFixed(2);
   }
 
   void _dolarChanged(String text){
-    print(text);
+    double dolar = double.parse(text);
+    realController.text = (dolar*this.dolar).toStringAsFixed(2);
+    euroController.text = (dolar*this.dolar/euro).toStringAsFixed(2);
   }
 
   void _euroChanged(String text){
-    print(text);
+    double euro = double.parse(text);
+     realController.text = (euro*this.euro).toStringAsFixed(2);
+     dolarController.text = (euro*this.euro/dolar).toStringAsFixed(2);
   }
 
 
@@ -110,10 +118,10 @@ class HomeState extends State<Home> {
                     ),
                   );
                 } else {
-                  var dollar =
+                  dolar =
                       snapshot.data!["results"]["currencies"]["USD"]["buy"];
 
-                  var euro =
+                  euro =
                       snapshot.data!["results"]["currencies"]["EUR"]["buy"];
                   //tela que rola
                   return SingleChildScrollView(
