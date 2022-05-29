@@ -16,7 +16,10 @@ ___
 ___
 ### ✅ Técnicas e tecnologias utilizadas
  
- <img align="center" alt="Yuri-dart" height="30" width="40" src="https://user-images.githubusercontent.com/102839085/161417312-400c5126-9cc8-41e8-a1ea-cb7461a8fa4f.svg"> <img align="center" alt="Yuri-flutter" height="30" width="40" src="https://user-images.githubusercontent.com/102839085/161416406-160edc91-cee1-46c4-bff2-b9c112834d71.svg">
+ <img align="center" alt="Yuri-dart" height="30" width="40" src="https://user-images.githubusercontent.com/102839085/161417312-400c5126-9cc8-41e8-a1ea-cb7461a8fa4f.svg">
+ <sub>DART</sub>
+ <img align="center" alt="Yuri-flutter" height="30" width="40" src="https://user-images.githubusercontent.com/102839085/161416406-160edc91-cee1-46c4-bff2-b9c112834d71.svg">
+ <sub>FLUTTER</sub>
 
 
 ___
